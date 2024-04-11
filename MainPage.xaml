@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mod2LabB.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="When can I legally buy Alcohol"
+                Style="{StaticResource Headline}" />
+
+            <Label Text="Date of Birth" />
+            <DatePicker x:Name="Birthday" HorizontalOptions="Fill"/>
+            <Picker x:Name="Country"
+                Title="Select your country">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>United States of America</x:String>
+                        <x:String>China</x:String>
+                        <x:String>Germany</x:String>
+                        <x:String>United Kingdom</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+                x:Name="TimeUntillAlcoholButton"
+                Text="Find out when you can legally buy Alcohol"
+                Clicked="TimeUntillAlcohol"
+                HorizontalOptions="Fill" />
+
+            <Label x:Name="TimeUntillAlcoholOutput" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
